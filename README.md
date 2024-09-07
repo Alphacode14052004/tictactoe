@@ -1,55 +1,61 @@
-# Nano React App Default Javascript Template
 
-The default template project for [nano-react-app](https://github.com/adrianmcli/nano-react-app).
+# TicTacToe UI in React
 
-- `npm start` — This will spawn a development server with a default port of `1234`.
-- `npm run build` — This will output a production build in the `dist` directory.
+## Overview
 
-## Custom port
+This project is a simple implementation of the TicTacToe game’s user interface using React JS. It provides an intuitive and interactive front-end for users to play the classic game, allowing for two players to take turns in marking X and O on a 3x3 grid.
 
-You can use the `-p` flag to specify a port for development. To do this, you can either run `npm start` with an additional flag:
+### Features
+- **Interactive Grid**: Users can click on the cells to mark their moves, alternating between X and O.
+- **Responsive Design**: The UI adapts to different screen sizes, providing a smooth experience on both desktop and mobile devices.
+- **Basic Game Logic Integration**: Allows players to see their moves in real-time, although it doesn't yet include win/loss logic.
 
-```
-npm start -- -p 3000
-```
+### Project Structure
+The project is built with React JS, using functional components for simplicity and ease of understanding.
 
-Or edit the `start` script directly:
+- **Components**:
+  - `Board`: Renders the 3x3 grid of the game.
+  - `Square`: Represents each individual cell in the TicTacToe grid.
 
-```
-parcel index.html -p 3000
-```
+### Installation
 
-## Adding styles
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/tictactoe-ui.git
+   ```
 
-You can use CSS files with simple ES2015 `import` statements anywhere in your Javascript:
+2. Navigate to the project directory:
+   ```bash
+   cd tictactoe-ui
+   ```
 
-```js
-import "./index.css";
-```
+3. Install the necessary dependencies:
+   ```bash
+   npm install
+   ```
 
-## Babel transforms
+4. Start the development server:
+   ```bash
+   npm start
+   ```
 
-The Babel preset [babel-preset-nano-react-app](https://github.com/nano-react-app/babel-preset-nano-react-app) is used to support the same transforms that Create React App supports.
+5. Open your browser and go to `http://localhost:3000` to view the TicTacToe UI.
 
-The Babel configuration lives inside `package.json` and will override an external `.babelrc` file, so if you want to use `.babelrc` remember to delete the `babel` property inside `package.json`.
+### Usage
 
+- Click on any square to mark it with X or O.
+- The UI alternates between X and O for each click.
 
-## Deploy to GitHub Pages
+### Future Enhancements
+- **Game Logic**: Implement win/loss detection and game reset functionality.
+- **Animations**: Add subtle animations for a more interactive user experience.
+- **AI Player**: Add a basic AI for single-player mode.
 
-You can also deploy your project using GitHub pages.
-First install the `gh-pages` [package](https://github.com/tschaub/gh-pages):
+### Contributing
 
-`npm i -D gh-pages`
+We welcome contributions to enhance the game. Feel free to fork the repository and submit pull requests.
 
-With Parcel's `--public-url` flag, use the following scripts for deployment:
+### License
 
-```
-"scripts": {
-  "start": "parcel index.html",
-  "build": "parcel build index.html --public-url '.'",
-  "predeploy": "rm -rf dist && parcel build index.html --public-url '.'",
-  "deploy": "gh-pages -d dist"
-},
-```
+This project is licensed under the MIT License.
 
-Then follow the normal procedure in GitHub Pages and select the `gh-pages` branch.
